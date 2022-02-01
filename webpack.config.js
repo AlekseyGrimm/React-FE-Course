@@ -14,7 +14,7 @@ module.exports = {
     
     output: {
         path: path.resolve(__dirname, './dist'),
-        filename: '[name].bundle.js',
+        filename: '[name].js',
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -24,7 +24,7 @@ module.exports = {
           cleanStaleWebpackAssets: false
         }),
     ],
-    devtools: 'inline-sourse-map',
+    // devtools: 'inline-sourse-map',
     module: {
         rules: [
 
