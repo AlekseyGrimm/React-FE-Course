@@ -1,6 +1,13 @@
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
+    mode: 'development',
+    
+    devServer: {
+        contentBase: './dist'
+    },
     entry: {
         main: path.resolve(__dirname, './src/index.js'),
     },
@@ -9,7 +16,15 @@ module.exports = {
         path: path.resolve(__dirname, './dist'),
         filename: '[name].bundle.js',
     },
-
+    plugins: [
+        new HtmlWebpackPlugin({
+          title: ' ',
+        }),
+        new CleanWebpackPlugin({
+          cleanStaleWebpackAssets: false
+        }),
+    ],
+    devtools: 'inline-sourse-map',
     module: {
         rules: [
 
@@ -37,6 +52,18 @@ module.exports = {
                 test: /\.css$/i,
                 use: ["style-loader", "css-loader"],
               },
+
+              {
+              test: /\.(js|jsx)$/,
+          exclude: /node_modules/,
+          use: {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env'],
+            }
+        }
+    }
+        
         ],
     }
 }
