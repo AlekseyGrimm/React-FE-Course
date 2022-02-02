@@ -3,28 +3,24 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
-    mode: 'development',
-    
+    entry: './src/index.js',
+    mode: 'development', 
     devServer: {
         contentBase: './dist'
-    },
-    entry: {
-        main: path.resolve(__dirname, './src/index.js'),
-    },
+    },   
     
     output: {
-        path: path.resolve(__dirname, './dist'),
-        filename: '[name].js',
+        filename: '[name].[contenthash].js',
+        path: path.resolve(__dirname, 'dist'),
+        clean: true, // clean folder 'dist' with new build
     },
     plugins: [
         new HtmlWebpackPlugin({
-          title: ' ',
+          title: 'Task 2',
         }),
-        new CleanWebpackPlugin({
-          cleanStaleWebpackAssets: false
-        }),
+        new CleanWebpackPlugin(),
     ],
-    // devtools: 'inline-sourse-map',
+    devtool: 'inline-source-map',
     module: {
         rules: [
 
@@ -37,15 +33,16 @@ module.exports = {
 
             //add images
             {
-                test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
-                type: 'asset/resource',
+                test: /\.(ico|gif|png|jpg|jpeg)$/i,
+                use: ["file-loader"]
             },
 
-            //add fonts and svg
+            // add fonts
             {
-                test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
-                type: 'asset/inline',
+                test: /\.(woff|woff2|eot|ttf|otf)$/i,
+                use: ["file-loader"]
             },
+
 
             // load css in DOM
             {
@@ -53,17 +50,18 @@ module.exports = {
                 use: ["style-loader", "css-loader"],
               },
 
-              {
-              test: /\.(js|jsx)$/,
-          exclude: /node_modules/,
-          use: {
-            loader: 'babel-loader',
-            options: {
-              presets: ['@babel/preset-env'],
-            }
-        }
-    }
-        
+            // Babel 
+            {
+                test: /\.js$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                  loader: 'babel-loader',
+                  options: {
+                    presets: ['@babel/preset-env', '@babel/preset-react'],
+                    plugins: ['@babel/plugin-proposal-object-rest-spread']
+                  }
+                }
+            },                    
         ],
     }
 }
