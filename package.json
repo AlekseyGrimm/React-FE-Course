@@ -1,18 +1,16 @@
 {
   "name": "react-fe-course",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "webpack --watch",
-    "dev": "webpack-dev-server --mode development --open",
+    "test": "jest",    
+    "dev": "webpack --mode development",
+    "start": "webpack serve --mode development --open",
     "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AlekseyGrimm/React-FE-Course.git",
-    "start": "webpack serve"
+    "url": "git+https://github.com/AlekseyGrimm/React-FE-Course.git"
   },
   "keywords": [],
   "author": "",
@@ -22,25 +20,27 @@
   },
   "homepage": "https://github.com/AlekseyGrimm/React-FE-Course#readme",
   "dependencies": {
-    "clean-webpack-plugin": "^4.0.0",
-    "html-webpack-plugin": "^5.5.0",
-    "jest": "^27.4.7",
+    "jest": "^27.4.5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-redux": "^7.2.6",
     "react-router": "^6.2.1",
     "redux": "^4.1.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.16.12",
-    "@babel/preset-env": "^7.16.11",
-    "@babel/preset-react": "^7.16.7",
+    "@babel/core": "^7.16.5",
+    "@babel/preset-env": "^7.16.5",
+    "@babel/preset-react": "^7.16.5",
     "babel-loader": "^8.2.3",
+    "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.5.1",
-    "file-loader": "^6.2.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.4.5",
+    "sass": "^1.45.1",
+    "sass-loader": "^12.4.0",
     "style-loader": "^3.3.1",
-    "webpack": "^5.68.0",
-    "webpack-cli": "^4.9.2",
-    "webpack-dev-server": "^4.7.3"
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.7.1"
   }
 }
