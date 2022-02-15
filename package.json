@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "jest",    
+    "test": "jest",
     "dev": "webpack --mode development",
-    "start": "webpack serve --mode development --open",
+    "start": "webpack serve --env development --open",
     "build": "webpack --mode production"
   },
   "repository": {

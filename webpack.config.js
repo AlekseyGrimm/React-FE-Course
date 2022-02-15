@@ -56,8 +56,9 @@ module.exports = ({ development }) => ({
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Task2',
-    }),
+      title: "test",
+      template: './src/index.html'
+  }),
     new CleanWebpackPlugin({
       cleanStaleWebpackAssets: false
     }),
