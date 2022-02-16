@@ -1,0 +1,8 @@
+.wraperHeader {
+    background-color: aquamarine;
+}
+
+.Header {
+  display: flex;
+  justify-content: center;
+}

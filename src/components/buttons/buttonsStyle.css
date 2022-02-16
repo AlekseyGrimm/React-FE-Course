@@ -1,0 +1,29 @@
+/* searchButton */
+
+.SearchButton {
+    width: 70px;
+    height: 30px;
+    margin-left: 2em;
+    box-shadow: 0 0 10px 3px #00000057;
+    background-color: #ff000091;
+    color: aliceblue;
+    border: none;
+}
+
+.SearchInput {
+    width: 40em;
+    height: 2em;
+    background-color: #80808073;
+    box-shadow: 0 0 10px 3px #0000007a;
+    border: none;
+}
+
+/* addButton */
+
+.AddButton {
+    display: flex;
+    margin-left: auto;
+    color: red;
+    background-color: #8584847d;
+    border: none;
+}

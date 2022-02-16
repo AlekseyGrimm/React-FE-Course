@@ -1,12 +1,31 @@
-import React from "react"
-import searchButton from 'components/buttons/searchButton.js'
+import React, { useState } from "react";
+import "./Header.css";
+import SearchButton from "../buttons/SearchButton";
+import Modal from "../modal/modal";
 
 const Header = () => {
+  const [modalOpen, setModalOpen] = useState(false);
 
-    return
+  return (
     <>
-    <searchButton></searchButton>
+      <div class="wraperHeader">
+        {/* modal */}
+        <button
+          className="openModalBtn"
+          onClick={() => {
+            setModalOpen(true);
+          }}
+        >
+          + ADD MOVIE
+        </button>
+        {modalOpen && <Modal setOpenModal={setModalOpen} />}
+
+        <div class="Header">
+          <SearchButton />
+        </div>
+      </div>
     </>
-}
+  );
+};
 
 export default Header;

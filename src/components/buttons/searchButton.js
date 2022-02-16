@@ -1,10 +1,13 @@
-import React from "react";
+import React from "react"
+import './buttonsStyle.css'
 
-const searchButton = () => {
-  
-    
-       
-  
+const SearchButton = () => {
+  return (
+    <>
+        <input class='SearchInput'></input>
+      <button class="SearchButton">Search</button>
+    </>
+  );
 };
 
-export default searchButton;
+export default SearchButton;
