@@ -44,8 +44,12 @@
 .modalContainer .body {
     flex: 50%;
     display: flex;
-    font-size: 1.7rem;
+    font-size: 1.1rem;
     flex-direction: column;
+}
+
+.body:nth-child(odd) {
+    margin: 0;
 }
 
 .modalContainer .footer {
@@ -60,7 +64,7 @@
   height: 45px;
   margin: 10px;
   border: none;
-  background-color: cornflowerblue;
+  background-color: #f65261;;
   color: white;
   border-radius: 8px;
   font-size: 20px;
@@ -68,5 +72,8 @@
 }
 
 #cancelBtn {
-  background-color: crimson;
+    background-color: #232323;
+    color: #F65261;
+    border-color: #f65261;
+    border-style: solid;
 }
