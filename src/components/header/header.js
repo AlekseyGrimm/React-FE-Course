@@ -8,6 +8,7 @@ const Header = () => {
 
   return (
     <>
+      {/* <img src="https:#" class='blurImg' alt="img" /> */}
       <div class="wraperHeader">
         {/* modal */}
         <button
@@ -21,6 +22,7 @@ const Header = () => {
         {modalOpen && <Modal setOpenModal={setModalOpen} />}
 
         <div class="Header">
+          <p>FIND YOU MOVIE</p>
           <SearchButton />
         </div>
       </div>

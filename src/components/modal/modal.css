@@ -1,26 +1,27 @@
 .modalBackground {
-    width: 100vw;
-    height: 100vh;
-    background-color: #9d9999a6;
-    position: fixed;
-    display: flex;
-    justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #9d9999a6;
+  position: fixed;
+  display: flex;
+  justify-content: center;
 }
 
 .modalContainer {
-    width: 500px;
-    border-radius: 12px;
-    background-color: #232323;
-    box-shadow: #00000059 0px 5px 15px;
-    display: flex;
-    flex-direction: column;
-    padding: 25px;  
-    color: #f65261;
+  width: 50vh;
+  height: 80vh;
+  border-radius: 12px;
+  background-color: #232323;
+  box-shadow: #00000059 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  color: #f65261;
 }
 
 .inputModal {
-    background-color: #424242;
-    height: 2em;
+  background-color: #424242;
+  height: 2em;
 }
 
 .modalContainer .title {
@@ -42,14 +43,14 @@
 }
 
 .modalContainer .body {
-    flex: 50%;
-    display: flex;
-    font-size: 1.1rem;
-    flex-direction: column;
+  flex: 50%;
+  display: flex;
+  font-size: 1.1rem;
+  flex-direction: column;
 }
 
 .body:nth-child(odd) {
-    margin: 0;
+  margin: 0;
 }
 
 .modalContainer .footer {
@@ -64,7 +65,7 @@
   height: 45px;
   margin: 10px;
   border: none;
-  background-color: #f65261;;
+  background-color: #f65261;
   color: white;
   border-radius: 8px;
   font-size: 20px;
@@ -72,8 +73,8 @@
 }
 
 #cancelBtn {
-    background-color: #232323;
-    color: #F65261;
-    border-color: #f65261;
-    border-style: solid;
+  background-color: #232323;
+  color: #f65261;
+  border-color: #f65261;
+  border-style: solid;
 }
