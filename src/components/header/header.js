@@ -2,14 +2,18 @@ import React, { useState } from "react";
 import "./Header.css";
 import SearchButton from "../buttons/SearchButton";
 import Modal from "../modal/modal";
+import TopText from "../topText/topText";
+import BackgroundImage from "../backgroundImage/backgroundImage";
 
 const Header = () => {
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
     <>
-      {/* <img src="https:#" class='blurImg' alt="img" /> */}
       <div class="wraperHeader">
+        <BackgroundImage />
+        <div className="top-wraper">
+        <TopText />
         {/* modal */}
         <button
           className="openModalBtn"
@@ -20,10 +24,10 @@ const Header = () => {
           + ADD MOVIE
         </button>
         {modalOpen && <Modal setOpenModal={setModalOpen} />}
-
+        </div>
         <div class="Header">
-          <p>FIND YOU MOVIE</p>
-          <SearchButton />
+          <div className="header-text">FIND YOU MOVIE</div>
+          <div className="header-search"><SearchButton /></div>          
         </div>
       </div>
     </>
