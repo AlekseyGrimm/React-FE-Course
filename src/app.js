@@ -1,19 +1,19 @@
-import React from 'react'
-import Header from './components/header/Header'
-
-
+import React from "react";
+import ErrorBoundary from "./components/errorBoundary/errorBoundary";
+import Header from "./components/header/Header";
+import Body from "./components/Body/body";
 
 const App = () => {
-
-   
   return (
     <>
-    <div>
-        <Header />
-    </div>
+      <ErrorBoundary>
+        <div>
+          <Header />
+          <Body />
+        </div>
+      </ErrorBoundary>
     </>
-  )
-
+  );
 };
 
 export default App;
