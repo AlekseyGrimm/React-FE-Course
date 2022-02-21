@@ -4,7 +4,7 @@ import './backgroundImage.css';
 
 const BackgroundImage = () => (
   <div className="wraper-image">
-    <img src={Image} alt="image" className="backgroundImage" />
+    <div alt="image" className="backgroundImage" />
   </div>
 );
 

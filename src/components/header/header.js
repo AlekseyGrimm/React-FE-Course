@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <>
       <div class="wraperHeader">
-        <BackgroundImage />
+      <BackgroundImage />
         <div className="top-wraper">
         <TopText />
         {/* modal */}
@@ -29,6 +29,7 @@ const Header = () => {
           <div className="header-text">FIND YOU MOVIE</div>
           <div className="header-search"><SearchButton /></div>          
         </div>
+        
       </div>
     </>
   );
