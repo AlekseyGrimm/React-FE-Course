@@ -1,0 +1,20 @@
+.movie-container {
+  width: 100%;
+  letter-spacing: 1px;  
+  max-width: 1024px;
+}
+
+.result {
+  padding: 2.5rem 0;
+  font-weight: 200;
+}
+.result-count {
+  font-weight: 600;
+}
+
+.container-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 5px;
+}

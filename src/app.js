@@ -1,4 +1,5 @@
 import React from "react";
+import "./app.css";
 import ErrorBoundary from "./components/errorBoundary/errorBoundary";
 import Header from "./components/header/Header";
 import Body from "./components/Body/body";
@@ -8,7 +9,7 @@ const App = () => {
   return (
     <>
       <ErrorBoundary>
-        <div>
+        <div className="app">
           <Header />
           <Body />
           <TopText />
