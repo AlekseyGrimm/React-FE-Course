@@ -1,5 +1,6 @@
 import React from "react";
 import "./body.css";
+import MoviesContainer from "../MoviesContainer/moviesContainer";
 
 const Body = () => {
   
@@ -7,7 +8,7 @@ const Body = () => {
   return (
     <>
      <div className="wraperBody">
-         
+         <MoviesContainer />
      </div>
     </>
   );
