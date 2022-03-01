@@ -1,0 +1,53 @@
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+}
+
+.modal-wrapper {
+    position: relative;
+    max-width: 1024px;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 6rem;
+    background: #232323a1;
+}
+
+.modal-container {
+    position: relative;
+    width: 69rem;
+    height: 35rem;
+    background-color: dark;
+    padding: 6.5rem 8rem;
+    margin: 12.3rem auto;
+    box-shadow: 0px 0px 2px #0000001a, 0px 2px 10px #0000000d, 0px 10px 20px #0000000d, 0px 10px 50px #0000000d;
+    border-radius: 4px;
+}
+
+.modal-title {
+    margin-bottom: 4rem;
+}
+
+.modal-subtitle {
+    margin-bottom: 5rem;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.modal-button {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal-close {
+    width: 2.2rem;
+    height: 2.2rem;
+    position: absolute;
+    top: 2.6rem;
+    right: 2.6rem;
+    cursor: pointer;
+}
