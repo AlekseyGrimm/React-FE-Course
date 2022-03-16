@@ -1,5 +1,6 @@
 import React from "react";
 import "./deletModal.css";
+import SendButton from "../sendButton/sendButton";
 
 const DeleteModal = (props) => {
     const modalRef = React.createRef();
@@ -21,6 +22,7 @@ const DeleteModal = (props) => {
               <p className="modal-subtitle">Are you sure you want to delete this movie?</p>
             </div>
             <div className="modal-button">
+            <SendButton text="confirm" handleClick={props.handleDeleteModal} />
             </div>
           </div>
         </div>

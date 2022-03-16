@@ -14,7 +14,7 @@ const MovieCard = (props) => {
       <div className="movie-poster">
         <img className="movie-card" id={props.data.id} src={props.data.poster_path} alt={props.data.title} />
 
-        {!props.showOptions ?
+        {!props.showDropdown ?
           <div className="dot" onClick={(event) => props.handleClick(event, props.data.id)}></div>
           : <div className="conteiner-modal">
             <div className="modal-close">x</div>

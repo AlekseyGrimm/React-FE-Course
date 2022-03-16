@@ -1,0 +1,17 @@
+.send-button {
+    width: 18rem;
+    height: 5.7rem;
+    border-radius: 4px;
+    border: none;
+    background-color: #292627;
+    color: lightgrey;
+    font-weight: 500;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+    .send-button:hover {
+      opacity: 0.8;
+    }
