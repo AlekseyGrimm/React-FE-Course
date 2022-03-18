@@ -8,13 +8,13 @@ const MoviesContainer = () => {
     const [movies, setMovies] = useState([])
     const [showDropdown, setshowDropdown] = useState({})
 
-    useEffect(() => {
-      setMovies([...moviesList])
-      document.addEventListener('click', handleCloseClick)
-      return () => {
-        document.removeEventListener('click', handleCloseClick)
-      }
-    }, [])
+    // useEffect(() => {
+    //   setMovies([...moviesList])
+    //   document.addEventListener('click', handleCloseClick)
+    //   return () => {
+    //     document.removeEventListener('click', handleCloseClick)
+    //   }
+    // }, [])
 
     const handleOpenClick = (event, id) => {
       const item = movies.filter((movie) => movie.id == id)[0]
