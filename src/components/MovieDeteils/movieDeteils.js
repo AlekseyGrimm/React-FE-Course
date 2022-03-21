@@ -1,4 +1,5 @@
 import React from 'react';
+import './movieDetails.css';
 
 const MovieDetails = () => {
   
