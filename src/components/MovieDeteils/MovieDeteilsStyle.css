@@ -98,3 +98,14 @@
   font-size: 1.8rem;
   font-weight: 300;
 }
+
+@media only screen and (max-width: 580px) {
+  .details-container{
+    flex-direction: column;
+  }
+
+  .content-title{
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+}

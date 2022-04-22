@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import "./app.css"
 import ErrorBoundary from "./components/errorBoundary/errorBoundary"
 import Header from "./components/header/Header"
@@ -8,6 +8,7 @@ import MovieDetails from "./components/MovieDeteils/MovieDeteils"
 
 const App = () => {
   const [showDetails, setShowDetails] = useState(false)
+  const [currentId, setCurrentId] = useState('')
 
   const handleClick = () => {
     setShowDetails(!showDetails);
@@ -18,6 +19,13 @@ const App = () => {
     setCurrentId(e.target.id);
     setShowDetails(true);
   }
+
+  useEffect(() => {
+    document.addEventListener('click', setId);
+    return () => {
+      document.removeEventListener('click', setId);
+    }
+  })
 
   return (
     <>
