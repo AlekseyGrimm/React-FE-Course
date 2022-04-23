@@ -3,10 +3,16 @@ import "./MovieCard.css";
 import DeleteModal from "../deletModal/deletModal";
 
 const MovieCard = (props) => {
-  const [openDeleteModal, setOpenDeleteModal] = useState(false);
+  const [openDeleteModal, setOpenDeleteModal] = useState(false)
+  const [showMovieModal, setShowMovieModal] = useState(false);
 
   const handleDeleteModal = () => {
-    setOpenDeleteModal(!openDeleteModal);
+    setOpenDeleteModal(!openDeleteModal)
+
+  }
+
+  const handleMovieModal = () => {
+    setShowMovieModal(!showMovieModal)
   }
 
   return (
@@ -19,6 +25,7 @@ const MovieCard = (props) => {
           : <div className="conteiner-modal">
             <div className="modal-close">x</div>
             <div className="modal-edit">Edit</div>
+            <div className="options-edit" onClick={handleMovieModal}>Edit</div>
             <div className="modal-delete" onClick={handleDeleteModal}>Delete</div>
           </div>}
         {openDeleteModal && <DeleteModal handleDeleteModal={handleDeleteModal} />}
